@@ -1,0 +1,6 @@
+framework module Pods_paginationSwift {
+  umbrella header "Pods-paginationSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

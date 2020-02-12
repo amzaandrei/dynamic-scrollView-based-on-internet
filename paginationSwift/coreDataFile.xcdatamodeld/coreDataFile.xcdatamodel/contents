@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Movies" representedClassName="Movies" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary"/>
+        <relationship name="relationshipForMoviesInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MoviesInfo" inverseName="relationshipForMovies" inverseEntity="MoviesInfo"/>
+    </entity>
+    <entity name="MoviesInfo" representedClassName="MoviesInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="actors" optional="YES" attributeType="Transformable"/>
+        <attribute name="actorsImages" optional="YES" attributeType="Transformable"/>
+        <relationship name="relationshipForMovies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Movies" inverseName="relationshipForMoviesInfo" inverseEntity="Movies"/>
+    </entity>
+    <elements>
+        <element name="Movies" positionX="-407" positionY="-180" width="164" height="88"/>
+        <element name="MoviesInfo" positionX="-63" positionY="0" width="128" height="88"/>
+    </elements>
+</model>
